@@ -36,7 +36,7 @@
 # * require - Always SSL (skip verification)
 # * verify-ca - Always SSL (verify that the certificate presented by the server was signed by a trusted CA)
 # * verify-full - Always SSL (verify that the certification presented by the server was signed by a trusted CA and the server host name matches the one in the certificate)
-dsn="postgres://localhost/chirpstack_as?sslmode=disable"
+dsn="postgres://chirpstack_as:dbpassword@localhost/chirpstack_as?sslmode=disable"
 
 
 # Redis settings
@@ -121,7 +121,7 @@ url="redis://localhost:6379"
 
     # JWT secret used for api authentication / authorization
     # You could generate this by executing 'openssl rand -base64 32' for example
-    jwt_secret=""
+    jwt_secret="sTBhLpRvsHhSVk1TOJatu9ur+fk8+U3WdfabQ7vBsQQ="
 
 
 # Join-server configuration.

@@ -45,7 +45,7 @@ class LoginForm extends FormComponent {
       >
         <TextField
           id="email"
-          label="Username / email"
+          label="用户名 / 电子邮件"
           margin="normal"
           value={this.state.object.email || ""}
           onChange={this.onChange}
@@ -54,7 +54,7 @@ class LoginForm extends FormComponent {
         />
         <TextField
           id="password"
-          label="Password"
+          label="密码"
           type="password"
           margin="normal"
           value={this.state.object.password || ""}
@@ -71,7 +71,7 @@ class OpenIDConnectLogin extends Component {
   render() {
     return(
       <div>
-        <a href={this.props.loginUrl}><Button variant="outlined">{this.props.loginLabel}</Button></a>
+        <a href={this.props.loginUrl}><Button variant="outlined">"登录"</Button></a>
       </div>
     );
   }
@@ -132,17 +132,17 @@ class Login extends Component {
         <Grid item xs={6} lg={4}>
           <Card>
             <CardHeader
-              title="ChirpStack Login"
+              title="道能智联"
             />
             <CardContent>
               {!this.state.oidcEnabled && <LoginForm
-                submitLabel="Login"
+                submitLabel="登录"
                 onSubmit={this.onSubmit}
               />}
 
               {this.state.oidcEnabled && <OpenIDConnectLogin
                 loginUrl={this.state.oidcLoginUrl}
-                loginLabel={this.state.oidcLoginLabel}
+                loginLabel={this.state.oidcLoginlabel}
               />}
             </CardContent>
             {this.state.registration !== "" && <CardContent>
